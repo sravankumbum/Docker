@@ -12,7 +12,5 @@ dist/
 *.swo
 *.container
 coverage/
-frontend/build/
-backend/*.log
 *.tmp
 *.bak

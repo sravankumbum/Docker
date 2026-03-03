@@ -10,6 +10,8 @@ services:
       - ./frontend:/app
     environment:
       - NODE_ENV=development
+    networks:
+      - app-network
   backend:
     build: ./backend
     ports:
@@ -18,3 +20,9 @@ services:
       - ./backend:/app
     environment:
       - FLASK_ENV=development
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
